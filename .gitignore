@@ -1,0 +1,12 @@
+/pack  +4 repositorios de diseños/
+/PACK DE LOGOS DE FINANCHX/
+/node_modules/
+/.next/
+/out/
+/build/
+.DS_Store
+*.pem
+npm-debug.log*
+.env*
+*.tsbuildinfo
+next-env.d.ts
