@@ -62,7 +62,7 @@ export function Navbar() {
             {/* CTA row */}
             <div className="hidden md:flex items-center gap-3">
               <span className="hidden xl:inline-flex items-center gap-1.5 text-[11px] font-mono text-[#C5C5C5] bg-[#0D0D0D] border border-[#292929] px-2.5 py-1 rounded-full">
-                <span className="w-1.5 h-1.5 rounded-full bg-[#22D3A5] animate-pulse" />
+                
                 Validación privada
               </span>
               <a
@@ -124,3 +124,4 @@ export function Navbar() {
     </motion.header>
   );
 }
+

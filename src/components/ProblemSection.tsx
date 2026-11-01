@@ -88,15 +88,15 @@ function AIExplanationCard() {
       </p>
       <div className="space-y-2 text-xs text-[#858585] font-mono">
         <div className="flex items-center gap-2">
-          <span className="w-1.5 h-1.5 rounded-full bg-[#22D3A5]" />
+          <span className="w-1.5 h-1.5 rounded-full bg-white/40" />
           <span>96.8% de conciliación automática</span>
         </div>
         <div className="flex items-center gap-2">
-          <span className="w-1.5 h-1.5 rounded-full bg-[#22D3A5]" />
+          <span className="w-1.5 h-1.5 rounded-full bg-white/40" />
           <span>Detección instantánea de diferencias</span>
         </div>
         <div className="flex items-center gap-2">
-          <span className="w-1.5 h-1.5 rounded-full bg-[#22D3A5]" />
+          <span className="w-1.5 h-1.5 rounded-full bg-white/40" />
           <span>Trazabilidad audit-ready</span>
         </div>
       </div>

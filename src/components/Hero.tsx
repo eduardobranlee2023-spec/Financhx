@@ -86,7 +86,6 @@ export function Hero() {
           
           {/* Eyebrow badge oficial con estilo exacto de los repos */}
           <div className="inline-flex items-center gap-2.5 px-3.5 py-1 rounded-full border border-white/10 bg-white/[0.03] text-xs font-mono text-neutral-300">
-            <span className="h-1.5 w-1.5 rounded-full bg-white animate-pulse" />
             <span className="tracking-wider uppercase font-semibold text-white">Financial Operating System</span>
             <span className="text-neutral-600">/</span>
             <span className="text-neutral-400">Acceso Privado</span>
@@ -110,19 +109,13 @@ export function Hero() {
 
           {/* BOTONES INTERACTIVOS - DIRECTOS DE UILAYOUTS (btn-creative-right & btn-hover-outline) */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-2">
-            {/* Botón principal: Adaptación exacta de ButtonCreativeRight en monocromo */}
+            {/* Botón principal: Adaptación limpia sin artefactos en blanco y negro */}
             <a
               href="#acceso-anticipado"
-              className="group relative cursor-pointer px-6 py-3.5 w-full sm:w-64 border border-white bg-white rounded-full overflow-hidden text-black text-center font-semibold text-sm transition-all duration-300 shadow-[0_0_20px_rgba(255,255,255,0.15)] flex items-center justify-center"
+              className="group relative cursor-pointer px-7 py-3.5 w-full sm:w-auto border border-white bg-white hover:bg-neutral-200 text-black rounded-full font-semibold text-sm transition-all duration-300 shadow-[0_0_20px_rgba(255,255,255,0.15)] flex items-center justify-center gap-2"
             >
-              <span className="translate-x-1 group-hover:translate-x-12 group-hover:opacity-0 transition-all duration-300 inline-block font-medium">
-                Solicitar acceso anticipado
-              </span>
-              <div className="flex gap-2 text-white z-10 items-center absolute top-0 h-full w-full justify-center translate-x-12 opacity-0 group-hover:-translate-x-0 group-hover:opacity-100 transition-all duration-300 font-medium">
-                <span>Comenzar ahora</span>
-                <ArrowRight className="w-4 h-4 ml-1" />
-              </div>
-              <div className="absolute top-[40%] left-[20%] h-2 w-2 group-hover:h-full group-hover:w-full rounded-lg bg-black scale-[1] group-hover:bg-[#000000] group-hover:scale-[1.8] transition-all duration-300 group-hover:top-[0%] group-hover:left-[0%] pointer-events-none" />
+              <span>Solicitar acceso anticipado</span>
+              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </a>
 
             {/* Botón secundario: ButtonHoverOutLine */}
@@ -193,7 +186,6 @@ export function Hero() {
 
                       <div className="flex items-center gap-2">
                         <span className="inline-flex items-center gap-1.5 text-[11px] font-mono text-white bg-white/10 border border-white/20 px-2.5 py-0.5 rounded-full">
-                          <span className="w-1.5 h-1.5 rounded-full bg-white animate-pulse" />
                           96.8% Conciliado
                         </span>
                       </div>

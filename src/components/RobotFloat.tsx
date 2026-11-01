@@ -30,7 +30,7 @@ export function RobotFloat() {
       </div>
       {/* Floating label */}
       <div className="absolute -bottom-3 left-1/2 -translate-x-1/2 inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#0D0D0D] border border-[#292929] text-[10px] font-mono text-[#C5C5C5] whitespace-nowrap">
-        <span className="w-1.5 h-1.5 rounded-full bg-[#22D3A5] animate-pulse" />
+        <span className="w-1.5 h-1.5 rounded-full bg-white/40" />
         Asistente operativo activo
       </div>
     </div>

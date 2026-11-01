@@ -10,6 +10,7 @@ import { EarlyAccessForm } from "@/components/EarlyAccessForm";
 import { Footer } from "@/components/Footer";
 import { WorkflowMarquee } from "@/components/WorkflowMarquee";
 import { StatsBanner } from "@/components/vendor/ui-layouts/stats-banner";
+import { VideoDemoSection } from "@/components/VideoDemoSection";
 import { TransferConceptSection } from "@/components/TransferConceptSection";
 import { MotionLabSection } from "@/components/MotionLabSection";
 import { UILayoutsMotionSection } from "@/components/UILayoutsMotionSection";
@@ -30,6 +31,9 @@ export default function Home() {
 
         {/* The Operational Friction: Problem Diagnosis */}
         <ProblemSection />
+
+        {/* Video explicativo con voz */}
+        <VideoDemoSection />
 
         {/* Financhx OS: The 3 Modules Architecture */}
         <PlatformModules />

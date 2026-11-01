@@ -75,8 +75,8 @@ export function PlatformModules() {
               <div className="lg:col-span-6 space-y-5">
                 <div className="flex flex-wrap items-center gap-2">
                   <span className="px-3 py-1 rounded-full bg-white text-[#050505] text-xs font-mono font-bold">MÓDULO 01 — PRODUCTO NÚCLEO</span>
-                  <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-[#22D3A5]/10 text-[#22D3A5] border border-[#22D3A5]/20 text-xs font-mono">
-                    <span className="w-1.5 h-1.5 rounded-full bg-[#22D3A5] animate-pulse" />
+                  <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-white/40/10 text-[#22D3A5] border border-[#22D3A5]/20 text-xs font-mono">
+                    <span className="w-1.5 h-1.5 rounded-full bg-white/40 animate-pulse" />
                     En desarrollo activo
                   </span>
                 </div>
@@ -222,3 +222,4 @@ export function PlatformModules() {
     </section>
   );
 }
+
