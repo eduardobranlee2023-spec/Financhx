@@ -51,11 +51,11 @@ export const StatsBanner = () => {
 
             <div className="relative z-10">
               <motion.span
-                initial={{ scale: 0.5, opacity: 0 }}
+                initial={{ scale: 0.9, opacity: 0 }}
                 whileInView={{ scale: 1, opacity: 1 }}
                 viewport={{ once: true }}
-                transition={{ delay: 0.3, type: 'spring', stiffness: 100 }}
-                className="mb-3 block bg-linear-to-r from-white to-neutral-400 bg-clip-text text-7xl font-semibold text-transparent md:text-8xl"
+                transition={{ delay: 0.2, duration: 0.5 }}
+                className="mb-3 block text-7xl font-bold tracking-tight text-white md:text-8xl"
               >
                 <NumberTicker value={1428} format={formatNumber} />
               </motion.span>
@@ -94,7 +94,7 @@ const StatBox = ({
     whileHover={{ y: -4, transition: { duration: 0.2 } }}
     className="group rounded-2xl border border-[#303030] bg-[#0D0D0D] p-8 text-center transition-all duration-300 hover:border-[#606060] hover:bg-[#111111]"
   >
-    <span className="mb-3 block text-4xl font-semibold text-white transition-colors md:text-5xl">
+    <span className="mb-3 block text-4xl font-bold text-white transition-colors md:text-5xl">
       <NumberTicker value={number} format={formatNumber} />
     </span>
     <p className="text-base font-medium text-[#C5C5C5]">{label}</p>
