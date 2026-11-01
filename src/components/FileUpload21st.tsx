@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useRef, useCallback } from "react";
+import React, { useState, useRef } from "react";
 import {
   FileSpreadsheet,
   FileText,
@@ -8,7 +8,6 @@ import {
   CheckCircle2,
   Trash2,
   Sparkles,
-  ArrowRight,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 

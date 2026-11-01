@@ -9,7 +9,6 @@ import {
   Workflow,
   Cpu,
   ArrowRight,
-  Sparkles,
   Check,
   Send,
 } from "lucide-react";

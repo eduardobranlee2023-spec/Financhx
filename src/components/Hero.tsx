@@ -50,23 +50,6 @@ function TextReveal({ text, className = "" }: { text: string; className?: string
   );
 }
 
-/* ─── Animated Beam ─── */
-function AnimatedBeamLine({ delay = 0 }: { delay?: number }) {
-  return (
-    <motion.div
-      className="absolute inset-0 rounded-full"
-      style={{
-        background: "linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.6) 50%, transparent 100%)",
-        width: "60%",
-      }}
-      initial={{ x: "-100%", opacity: 0 }}
-      animate={{ x: "200%", opacity: [0, 1, 1, 0] }}
-      transition={{ duration: 2.5, repeat: Infinity, delay, ease: "linear", repeatDelay: 1.5 }}
-    />
-  );
-}
-
-/* ─── Reconcile Data ─── */
 const ledgerItems = [
   {
     id: "REC-8041", banco: "Banco Galicia · CC$ 4012-8",

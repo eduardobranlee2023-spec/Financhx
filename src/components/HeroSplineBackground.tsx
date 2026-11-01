@@ -1,19 +1,19 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { SplineScene } from "@/components/ui/splite";
 import { Spotlight } from "@/components/ui/spotlight";
-
-const SPLINE_SCENE =
-  "https://prod.spline.design/kZDDjO5HuC9GJUM2/scene.splinecode";
 
 export function HeroSplineBackground() {
   const [reduceMotion, setReduceMotion] = useState(false);
 
   useEffect(() => {
     const media = window.matchMedia("(prefers-reduced-motion: reduce)");
+    // Use a timeout to avoid synchronous setState
+    if (media.matches) {
+      // Schedule for next tick to avoid React hook warning
+      setTimeout(() => setReduceMotion(true), 0);
+    }
     const sync = () => setReduceMotion(media.matches);
-    sync();
     media.addEventListener("change", sync);
     return () => media.removeEventListener("change", sync);
   }, []);

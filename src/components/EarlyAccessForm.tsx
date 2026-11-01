@@ -3,11 +3,9 @@
 import React, { useState } from "react";
 import { submitEarlyAccess, EarlyAccessSubmission } from "@/services/earlyAccess";
 import {
-  Shield,
   CheckCircle2,
   Lock,
   ArrowRight,
-  Sparkles,
   AlertCircle,
   Building,
   User,

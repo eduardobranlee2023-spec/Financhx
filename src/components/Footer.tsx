@@ -1,6 +1,5 @@
 import React from "react";
 import { FinanchxLogo } from "./FinanchxLogo";
-import { ArrowUpRight, ShieldCheck, Mail, Globe } from "lucide-react";
 
 export function Footer() {
   return (

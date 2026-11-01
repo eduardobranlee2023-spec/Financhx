@@ -3,8 +3,8 @@
 import React, { useState, useRef } from "react";
 import { motion, useInView } from "motion/react";
 import {
-  FileCheck2, TrendingUp, ShieldCheck, ArrowRight,
-  CheckCircle, Clock, Database, GitCompare,
+  TrendingUp, ShieldCheck, ArrowRight,
+  CheckCircle, Clock, Database,
 } from "lucide-react";
 import { FinanchxLogo } from "./FinanchxLogo";
 
@@ -190,9 +190,8 @@ export function PlatformModules() {
                 footer: "Módulo de asistencia operativa — no garantía legal."
               }
             ].map((mod, i) => {
-              const Icon = mod.icon;
-              return (
-                <motion.div
+                          return (
+                            <motion.div
                   key={mod.num}
                   initial={{ opacity: 0, y: 24 }}
                   animate={inView ? { opacity: 1, y: 0 } : {}}
