@@ -8,6 +8,8 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   return { title: lang === "en" ? "Cookie Policy — Financhx" : "Política de Cookies — Financhx" };
 }
 
+export function generateStaticParams() { return [{ lang: 'es' }, { lang: 'en' }]; }
+
 export default async function CookiesPage({ params }: { params: Promise<{ lang: string }> }) {
   const { lang } = await params;
   if (!hasLocale(lang)) notFound();

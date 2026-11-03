@@ -10,6 +10,8 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   };
 }
 
+export function generateStaticParams() { return [{ lang: 'es' }, { lang: 'en' }]; }
+
 export default async function PrivacidadPage({ params }: { params: Promise<{ lang: string }> }) {
   const { lang } = await params;
   if (!hasLocale(lang)) notFound();

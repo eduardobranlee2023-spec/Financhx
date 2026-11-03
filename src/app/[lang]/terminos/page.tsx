@@ -8,6 +8,8 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   return { title: lang === "en" ? "Terms & Conditions — Financhx" : "Términos y Condiciones — Financhx" };
 }
 
+export function generateStaticParams() { return [{ lang: 'es' }, { lang: 'en' }]; }
+
 export default async function TerminosPage({ params }: { params: Promise<{ lang: string }> }) {
   const { lang } = await params;
   if (!hasLocale(lang)) notFound();

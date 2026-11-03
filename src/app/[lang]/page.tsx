@@ -17,6 +17,10 @@ import { TransferConceptSection } from "@/components/TransferConceptSection";
 import { MotionLabSection } from "@/components/MotionLabSection";
 import { UILayoutsMotionSection } from "@/components/UILayoutsMotionSection";
 
+export function generateStaticParams() {
+  return [{ lang: "es" }, { lang: "en" }];
+}
+
 export default async function HomePage({
   params,
 }: {
