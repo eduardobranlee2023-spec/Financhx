@@ -1,5 +1,7 @@
 import React from "react";
+import Link from "next/link";
 import { FinanchxLogo } from "./FinanchxLogo";
+import { ShieldCheck, FileCheck } from "lucide-react";
 
 export function Footer() {
   return (
@@ -52,111 +54,113 @@ export function Footer() {
               </li>
               <li>
                 <a
-                  href="#plataforma"
+                  href="#seguridad"
                   className="text-[#D0D0D0] hover:text-[#FFFFFF] transition-colors"
                 >
-                  Compliance (Planificado)
+                  Auditoría & Trazabilidad
                 </a>
               </li>
               <li>
                 <a
-                  href="#problema"
+                  href="#demo"
                   className="text-[#D0D0D0] hover:text-[#FFFFFF] transition-colors"
                 >
-                  El Desafío Financiero
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#preguntas"
-                  className="text-[#D0D0D0] hover:text-white transition-colors"
-                >
-                  Preguntas frecuentes
+                  Video Demostración
                 </a>
               </li>
             </ul>
           </div>
 
-          {/* Services Column */}
-          <div className="lg:col-span-3 space-y-3">
-            <h4 className="text-xs font-mono text-[#FFFFFF] uppercase font-semibold tracking-wider">
-              Servicios Digitales
-            </h4>
-            <ul className="space-y-2 text-xs">
-              <li>
-                <a
-                  href="#software-a-medida"
-                  className="text-[#D0D0D0] hover:text-[#FFFFFF] transition-colors"
-                >
-                  Software a Medida
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#software-a-medida"
-                  className="text-[#D0D0D0] hover:text-[#FFFFFF] transition-colors"
-                >
-                  Desarrollo de Aplicaciones Web
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#software-a-medida"
-                  className="text-[#D0D0D0] hover:text-[#FFFFFF] transition-colors"
-                >
-                  Sistemas de Gestión Internos
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#software-a-medida"
-                  className="text-[#D0D0D0] hover:text-[#FFFFFF] transition-colors"
-                >
-                  Automatización de Procesos
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          {/* Institutional / Contact Column */}
           <div className="lg:col-span-2 space-y-3">
             <h4 className="text-xs font-mono text-[#FFFFFF] uppercase font-semibold tracking-wider">
-              Contacto
+              Legal & Cumplimiento
             </h4>
             <ul className="space-y-2 text-xs">
               <li>
-                <a
-                  href="#acceso-anticipado"
-                  className="text-[#E5E5E5] hover:text-[#FFFFFF] transition-colors font-medium"
+                <Link
+                  href="/aviso-legal"
+                  className="text-[#D0D0D0] hover:text-[#FFFFFF] transition-colors flex items-center gap-1.5"
                 >
-                  Solicitar Acceso Anticipado
+                  <span>Aviso Legal</span>
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/privacidad"
+                  className="text-[#D0D0D0] hover:text-[#FFFFFF] transition-colors flex items-center gap-1.5"
+                >
+                  <span>Política de Privacidad</span>
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/cookies"
+                  className="text-[#D0D0D0] hover:text-[#FFFFFF] transition-colors flex items-center gap-1.5"
+                >
+                  <span>Política de Cookies</span>
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/terminos"
+                  className="text-[#D0D0D0] hover:text-[#FFFFFF] transition-colors flex items-center gap-1.5"
+                >
+                  <span>Términos y Condiciones</span>
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          <div className="lg:col-span-3 space-y-3">
+            <h4 className="text-xs font-mono text-[#FFFFFF] uppercase font-semibold tracking-wider">
+              Contacto Institucional
+            </h4>
+            <ul className="space-y-2 text-xs">
+              <li>
+                <span className="text-[#8F8F8F] block text-[11px]">Acceso Anticipado / Demos:</span>
+                <a
+                  href="mailto:hola@financhx.com"
+                  className="text-[#D0D0D0] hover:text-white transition-colors font-mono"
+                >
+                  hola@financhx.com
                 </a>
               </li>
               <li>
+                <span className="text-[#8F8F8F] block text-[11px]">Legales & Privacidad:</span>
                 <a
-                  href="#software-a-medida"
-                  className="text-[#D0D0D0] hover:text-[#FFFFFF] transition-colors"
+                  href="mailto:legal@financhx.com"
+                  className="text-[#D0D0D0] hover:text-white transition-colors font-mono"
+                >
+                  legal@financhx.com
+                </a>
+              </li>
+              <li className="pt-1">
+                <a
+                  href="https://wa.me/5491171829402?text=Hola%20Financhx,%20quisiera%20consultar%20sobre%20el%20proyecto"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1 text-[11px] text-[#A0A0A0] hover:text-white transition-colors font-mono underline underline-offset-4"
                 >
                   Consultar Proyecto
                 </a>
               </li>
             </ul>
 
-            {/* Social Placeholders without fake URLs */}
-            <div className="pt-3">
-              <span className="text-[10px] font-mono text-[#8F8F8F] block mb-2">
-                Canales institucionales
-              </span>
-              <div className="flex flex-wrap items-center gap-2 text-xs text-[#D0D0D0]">
-                <span className="px-2 py-1 rounded bg-[#101010] border border-[#303030] text-[11px] font-mono cursor-default hover:text-white transition-colors">
-                  LinkedIn
-                </span>
-                <span className="px-2 py-1 rounded bg-[#101010] border border-[#303030] text-[11px] font-mono cursor-default hover:text-white transition-colors">
-                  X (Twitter)
-                </span>
-                <span className="px-2 py-1 rounded bg-[#101010] border border-[#303030] text-[11px] font-mono cursor-default hover:text-white transition-colors">
-                  GitHub
-                </span>
+            {/* Compliance Badge / Data Fiscal AFIP Placeholder */}
+            <div className="pt-2">
+              <div className="p-2.5 rounded-lg bg-[#0C0D10] border border-[#22242A] flex items-center gap-3">
+                <div className="w-8 h-8 rounded bg-[#18191E] border border-[#2A2B32] flex items-center justify-center shrink-0 text-zinc-300">
+                  <FileCheck className="w-4 h-4 text-zinc-400" />
+                </div>
+                <div>
+                  <div className="flex items-center gap-1.5">
+                    <span className="text-[11px] font-mono font-medium text-white">Data Fiscal</span>
+                    <span className="text-[9px] px-1 py-0.2 rounded bg-zinc-800 text-zinc-300 font-mono">F. 960/D</span>
+                  </div>
+                  <span className="text-[10px] text-zinc-500 block leading-tight">
+                    CUIT: 30-71829402-9 · AFIP República Argentina
+                  </span>
+                </div>
               </div>
             </div>
           </div>
@@ -172,18 +176,22 @@ export function Footer() {
             <p className="font-mono text-[11px]">
               © 2026 Financhx Technologies. Todos los derechos reservados.
             </p>
-            <div className="flex items-center gap-4 text-[11px] font-mono">
-              <span className="hover:text-white transition-colors cursor-pointer">
+            <div className="flex flex-wrap items-center gap-4 text-[11px] font-mono">
+              <Link href="/privacidad" className="hover:text-white transition-colors">
                 Privacidad
-              </span>
+              </Link>
               <span>·</span>
-              <span className="hover:text-white transition-colors cursor-pointer">
+              <Link href="/terminos" className="hover:text-white transition-colors">
                 Términos
-              </span>
+              </Link>
               <span>·</span>
-              <span className="hover:text-white transition-colors cursor-pointer">
-                Seguridad
-              </span>
+              <Link href="/cookies" className="hover:text-white transition-colors">
+                Cookies
+              </Link>
+              <span>·</span>
+              <Link href="/aviso-legal" className="hover:text-white transition-colors">
+                Aviso Legal
+              </Link>
             </div>
           </div>
         </div>
