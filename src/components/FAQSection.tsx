@@ -53,7 +53,7 @@ const tabs: FaqTab[] = [
   },
 ];
 
-export function FAQSection() {
+export function FAQSection({ lang = 'es' }: { lang?: string }) {
   return (
     <section
       id="preguntas"
@@ -90,3 +90,4 @@ export function FAQSection() {
     </section>
   );
 }
+

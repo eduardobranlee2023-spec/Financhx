@@ -13,7 +13,7 @@ import {
   Send,
 } from "lucide-react";
 
-export function CustomSoftwareSection() {
+export function CustomSoftwareSection({ lang = 'es' }: { lang?: string }) {
   const [inquiryModalOpen, setInquiryModalOpen] = useState(false);
   const [formSubmitted, setFormSubmitted] = useState(false);
   const [formData, setFormData] = useState({
@@ -320,3 +320,4 @@ export function CustomSoftwareSection() {
     </section>
   );
 }
+

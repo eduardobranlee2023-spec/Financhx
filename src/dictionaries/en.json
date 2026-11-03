@@ -1,0 +1,242 @@
+{
+  "meta": {
+    "title": "Financhx — Financial Operating System",
+    "description": "Enterprise software platform to centralize, automate and audit financial operations. Reduce manual processes and connect bank statements with invoicing in real time."
+  },
+  "navbar": {
+    "platform": "Platform",
+    "reconcile": "Reconcile",
+    "problem": "Problem",
+    "customSoftware": "Custom Software",
+    "faq": "FAQ",
+    "contact": "Contact",
+    "earlyAccess": "Request Early Access",
+    "language": "ES"
+  },
+  "hero": {
+    "badge": "Financial Operating System · Early Access",
+    "headline1": "One place.",
+    "headline2": "Every financial move.",
+    "sub": "Financhx centralizes bank statements, automates reconciliation rules and delivers real-time auditability — without spreadsheets.",
+    "cta": "Request Early Access",
+    "ctaSecondary": "Watch Demo",
+    "table": {
+      "id": "ID",
+      "bank": "Bank Account",
+      "type": "Type",
+      "bankAmount": "Bank Amount",
+      "voucher": "Voucher",
+      "counterpart": "Counterpart",
+      "invoiceAmount": "Invoice Amount",
+      "status": "Status",
+      "detail": "Detail",
+      "time": "Time",
+      "matched": "Matched",
+      "diff": "Diff",
+      "all": "All"
+    }
+  },
+  "stats": {
+    "items": [
+      { "value": "98%", "label": "Reconciliation precision" },
+      { "value": "10×", "label": "Faster than spreadsheets" },
+      { "value": "-73%", "label": "Manual time reduction" },
+      { "value": "24/7", "label": "Real-time visibility" }
+    ]
+  },
+  "problem": {
+    "badge": "The problem",
+    "title": "Manual reconciliation is the bottleneck slowing your finances.",
+    "sub": "Every month, your accounting team loses dozens of hours crossing banks, invoicing and collection reports. Financhx eliminates that friction.",
+    "problems": [
+      {
+        "number": "01",
+        "title": "Scattered financial sources",
+        "desc": "Banks, corporate wallets, payment gateways and invoicing systems operate in isolation. Teams download statements manually every month.",
+        "tag": "No single source of financial truth."
+      },
+      {
+        "number": "02",
+        "title": "Manual reconciliation in spreadsheets",
+        "desc": "Dependence on spreadsheets with fragile macros creates bottlenecks and exponential human error. Hundreds of hours lost per month.",
+        "tag": "Low-value operations consume qualified teams."
+      },
+      {
+        "number": "03",
+        "title": "Errors and gaps that are hard to detect",
+        "desc": "Bank commissions, withholdings or duplicated charges go unnoticed until the balance close, when the damage is already hard to reverse.",
+        "tag": "Inconsistencies that directly impact profitability."
+      },
+      {
+        "number": "04",
+        "title": "Non-existent traceability and audit",
+        "desc": "Reconstructing who authorized an entry, what document backed it up or what date it occurred requires long chains of emails and outdated files.",
+        "tag": "Impossible to pass audits without friction and delay."
+      },
+      {
+        "number": "05",
+        "title": "Repetitive processes that wear teams down",
+        "desc": "Qualified accounting teams spend most of their day copying and comparing data instead of strategic financial analysis.",
+        "tag": "Team burnout and chronic financial procrastination."
+      }
+    ]
+  },
+  "videoDemo": {
+    "badge": "Live Demo",
+    "title": "See Financhx in action.",
+    "sub": "Watch how the platform automates reconciliation, centralizes sources and delivers complete audit traceability — in minutes.",
+    "cta": "Request Early Access",
+    "disclaimer": "Illustrative demo. Figures shown are fictitious examples and do not represent real operations."
+  },
+  "platform": {
+    "badge": "Financhx OS",
+    "title": "Three modules. One financial operating system.",
+    "sub": "Financhx is not just a reconciliation tool. It is an integrated operating infrastructure for the financial area of your company.",
+    "modules": [
+      {
+        "tag": "MODULE 01",
+        "name": "Reconcile",
+        "status": "In Development",
+        "desc": "Automated engine for bank vs invoice reconciliation. Detects exact matches, partial differences and unidentified movements with configurable rules.",
+        "features": ["Bank ↔ Invoice Reconciliation", "Configurable Rule Engine", "Withholding & Commission Deductions", "Real-time Status Dashboard"]
+      },
+      {
+        "tag": "MODULE 02",
+        "name": "Optimize",
+        "status": "Planned",
+        "desc": "Real-time cash flow analysis, payment projections and treasury management. Convert raw data into actionable insights for your CFO.",
+        "features": ["Cash Flow Forecasting", "30/60/90 Day Projections", "Alert & Anomaly System", "Executive Reports"]
+      },
+      {
+        "tag": "MODULE 03",
+        "name": "Ledger",
+        "status": "Planned",
+        "desc": "Immutable accounting record with complete operation log, digital signature chain and integration with certified accounting systems.",
+        "features": ["Immutable Audit Trail", "Entry Digital Signature", "Accounting System Integration", "Regulatory Compliance"]
+      }
+    ]
+  },
+  "earlyAccess": {
+    "badge": "PRIVATE PILOT PROGRAM",
+    "title": "Join Financhx early validation.",
+    "sub": "We're looking for CFOs, controllers and accounting directors willing to test our reconciliation architecture and give us real feedback before the public launch.",
+    "benefits": [
+      "Priority access to the first functional versions of Reconcile.",
+      "Direct influence on the product roadmap from a business user perspective.",
+      "Zero cost during the pilot phase and preferential pricing at launch."
+    ],
+    "disclaimer": "We do not share your data with third parties. Used exclusively to coordinate demos and pilot access.",
+    "form": {
+      "name": "Full name",
+      "company": "Company",
+      "email": "Corporate email",
+      "role": "Role / Position",
+      "interest": "What interests you most?",
+      "submit": "Request access",
+      "sending": "Sending...",
+      "successTitle": "Request sent!",
+      "successMsg": "We received your information. Our team will contact you within 48 business hours to coordinate a demo and onboarding to the pilot.",
+      "interests": [
+        "Financhx Reconcile (Bank Reconciliation)",
+        "Financhx Optimize (Cash Flow & Treasury)",
+        "Financhx Ledger (Audit & Traceability)",
+        "Custom Software Development"
+      ]
+    }
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "sub": "Quick answers about the demo, the product and Financhx.",
+    "tabs": [
+      {
+        "label": "Demo",
+        "faqs": [
+          { "question": "Does the demo process real reconciliations?", "answer": "No. The demo presents illustrative scenarios to explain a flow; the product is in development and does not yet process real operations." },
+          { "question": "What do the figures shown represent?", "answer": "They are sample data to illustrate the interface; they do not represent client operations or real results." }
+        ]
+      },
+      {
+        "label": "Financhx",
+        "faqs": [
+          { "question": "Is Financhx a bank or does it provide financial advice?", "answer": "No. Financhx develops software for business operations; it is not a banking entity, does not hold funds, and does not offer financial or tax advice." },
+          { "question": "Can you develop custom software?", "answer": "Yes. The digital engineering division accepts inquiries for web applications, internal systems, automation and enterprise integrations." }
+        ]
+      },
+      {
+        "label": "Data",
+        "faqs": [
+          { "question": "Does the demo read or send selected files?", "answer": "No. The current uploader only shows the name and size of the selected file. It does not read its content nor send it to a server." },
+          { "question": "Are the metrics real client results?", "answer": "No. The prototype figures are illustrative data; they do not represent real results or guarantee performance." }
+        ]
+      }
+    ]
+  },
+  "footer": {
+    "tagline": "Software to simplify, centralize and automate enterprise financial operations. Reducing manual processes and providing comprehensive accounting traceability.",
+    "badge": "Built for growing companies",
+    "country": "Argentina",
+    "social": "Social Media",
+    "platformTitle": "Financhx OS",
+    "legalTitle": "Legal",
+    "contactTitle": "Contact",
+    "links": {
+      "reconcile": "Reconcile",
+      "optimize": "Optimize (Planned)",
+      "audit": "Audit & Traceability",
+      "demo": "Video Demo",
+      "legal": "Legal Notice",
+      "privacy": "Privacy Policy",
+      "cookies": "Cookie Policy",
+      "terms": "Terms & Conditions"
+    },
+    "contact": {
+      "salesLabel": "Sales",
+      "supportLabel": "Support & Help",
+      "infoLabel": "Info",
+      "legalLabel": "Legal",
+      "employmentLabel": "Employment",
+      "marketingLabel": "Marketing"
+    },
+    "disclaimer": "Financhx is a software platform in development designed for operational management, movement reconciliation and administrative control of companies. Financhx is not a bank, regulated financial company, digital wallet, nor an investment or fund custody platform.",
+    "copyright": "© 2026 Financhx Technologies. All rights reserved.",
+    "privacyLink": "Privacy",
+    "termsLink": "Terms",
+    "cookiesLink": "Cookies",
+    "legalLink": "Legal Notice"
+  },
+  "customSoftware": {
+    "badge": "Digital Engineering",
+    "title": "We also build custom software.",
+    "sub": "Beyond Financhx, our team designs and develops web applications, internal systems and enterprise integrations on demand.",
+    "cta": "Talk to us about your project"
+  },
+  "legal": {
+    "nav": {
+      "legalNotice": "Legal Notice",
+      "privacy": "Privacy Policy",
+      "cookies": "Cookie Policy",
+      "terms": "Terms & Conditions"
+    },
+    "back": "Back to home",
+    "framework": "Institutional Legal Framework",
+    "lastUpdated": "Last updated",
+    "compliance": "Compliance Ley 25.326 and international standards"
+  },
+  "cookieBanner": {
+    "title": "Privacy & Transparency",
+    "heading": "Cookie and Navigation Data Management",
+    "body": "We use essential and anonymous analytics cookies to ensure the secure operation of the site, remember your preferences and evaluate platform performance. For more details, see our",
+    "policyLink": "Cookie Policy",
+    "configure": "Configure",
+    "rejectNonEssential": "Reject non-essential",
+    "acceptAll": "Accept all",
+    "cancel": "Cancel",
+    "savePreferences": "Save preferences",
+    "essential": "Technical & Essential Cookies",
+    "essentialDesc": "Strictly necessary for routing and security.",
+    "alwaysActive": "Always Active",
+    "analytics": "Performance & Analytics Cookies",
+    "analyticsDesc": "Anonymous load metrics and aggregate traffic without tracking identity."
+  }
+}
+

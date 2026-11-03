@@ -1,11 +1,18 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
+import Link from "next/link";
 import { motion, AnimatePresence } from "motion/react";
 import { FinanchxLogo } from "./FinanchxLogo";
-import { Menu, X, ArrowUpRight } from "lucide-react";
+import { Menu, X, ArrowUpRight, Globe } from "lucide-react";
+import type { Dictionary } from "@/dictionaries/dictionaries";
 
-export function Navbar() {
+interface NavbarProps {
+  dict: Dictionary["navbar"];
+  lang: string;
+}
+
+export function Navbar({ dict, lang }: NavbarProps) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -15,13 +22,16 @@ export function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const otherLang = lang === "es" ? "en" : "es";
+  const otherLangLabel = lang === "es" ? "EN" : "ES";
+
   const navLinks = [
-    { label: "Plataforma", href: "#plataforma" },
-    { label: "Reconcile", href: "#reconcile" },
-    { label: "Problema", href: "#problema" },
-    { label: "Software a Medida", href: "#software-a-medida" },
-    { label: "Preguntas", href: "#preguntas" },
-    { label: "Contacto", href: "#acceso-anticipado" },
+    { label: dict.platform, href: "#plataforma" },
+    { label: dict.reconcile, href: "#reconcile" },
+    { label: dict.problem, href: "#problema" },
+    { label: dict.customSoftware, href: "#software-a-medida" },
+    { label: dict.faq, href: "#preguntas" },
+    { label: dict.contact, href: "#acceso-anticipado" },
   ];
 
   return (
@@ -61,15 +71,20 @@ export function Navbar() {
 
             {/* CTA row */}
             <div className="hidden md:flex items-center gap-3">
-              <span className="hidden xl:inline-flex items-center gap-1.5 text-[11px] font-mono text-[#C5C5C5] bg-[#0D0D0D] border border-[#292929] px-2.5 py-1 rounded-full">
-                
-                Validación privada
-              </span>
+              {/* Language switcher */}
+              <Link
+                href={`/${otherLang}`}
+                className="inline-flex items-center gap-1.5 text-[11px] font-mono text-[#C5C5C5] bg-[#0D0D0D] border border-[#292929] px-2.5 py-1 rounded-full hover:text-white hover:border-[#444] transition-colors"
+                aria-label="Switch language"
+              >
+                <Globe className="w-3 h-3" />
+                {otherLangLabel}
+              </Link>
               <a
                 href="#acceso-anticipado"
                 className="inline-flex items-center gap-1.5 px-4 py-2 text-xs font-bold text-[#050505] bg-white hover:bg-[#D1D1D1] rounded-lg transition-all active:scale-[0.97]"
               >
-                Acceso anticipado
+                {dict.earlyAccess}
                 <ArrowUpRight className="w-3.5 h-3.5" />
               </a>
             </div>
@@ -78,7 +93,7 @@ export function Navbar() {
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               className="md:hidden p-2 rounded-lg bg-[#0D0D0D] border border-[#292929] text-[#C5C5C5] hover:text-white transition-colors"
-              aria-label="Menú"
+              aria-label="Menu"
             >
               {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
             </button>
@@ -106,13 +121,20 @@ export function Navbar() {
                     {link.label}
                   </a>
                 ))}
-                <div className="pt-3 border-t border-[#292929] mt-3">
+                <div className="pt-3 border-t border-[#292929] mt-3 space-y-2">
+                  <Link
+                    href={`/${otherLang}`}
+                    className="flex items-center gap-2 px-4 py-2.5 text-sm font-medium text-[#C5C5C5] hover:text-white bg-[#0D0D0D] border border-[#292929] rounded-xl transition-colors"
+                  >
+                    <Globe className="w-4 h-4" />
+                    {otherLangLabel === "EN" ? "Switch to English" : "Cambiar a Español"}
+                  </Link>
                   <a
                     href="#acceso-anticipado"
                     onClick={() => setMobileMenuOpen(false)}
                     className="flex items-center justify-center gap-2 px-4 py-3 text-sm font-bold text-[#050505] bg-white hover:bg-[#D1D1D1] rounded-xl transition-colors"
                   >
-                    Solicitar acceso anticipado
+                    {dict.earlyAccess}
                     <ArrowUpRight className="w-4 h-4" />
                   </a>
                 </div>
@@ -124,4 +146,3 @@ export function Navbar() {
     </motion.header>
   );
 }
-

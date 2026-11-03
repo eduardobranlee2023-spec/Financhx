@@ -24,7 +24,7 @@ const reconcileFeatures = [
   "Asistencia en casos ambiguos",
 ];
 
-export function PlatformModules() {
+export function PlatformModules({ lang = 'es' }: { lang?: string }) {
   const [activeStep, setActiveStep] = useState(2);
   const ref = useRef<HTMLDivElement>(null);
   const inView = useInView(ref, { once: true, amount: 0.1 });
@@ -222,4 +222,5 @@ export function PlatformModules() {
     </section>
   );
 }
+
 

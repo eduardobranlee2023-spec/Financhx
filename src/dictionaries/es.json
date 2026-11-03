@@ -1,0 +1,242 @@
+{
+  "meta": {
+    "title": "Financhx — Financial Operating System",
+    "description": "Plataforma empresarial de software para centralizar, automatizar y auditar operaciones financieras. Reducí procesos manuales y conectá extractos bancarios con facturación en tiempo real."
+  },
+  "navbar": {
+    "platform": "Plataforma",
+    "reconcile": "Reconcile",
+    "problem": "Problema",
+    "customSoftware": "Software a Medida",
+    "faq": "Preguntas",
+    "contact": "Contacto",
+    "earlyAccess": "Solicitar acceso anticipado",
+    "language": "EN"
+  },
+  "hero": {
+    "badge": "Financial Operating System · Acceso Anticipado",
+    "headline1": "Un solo lugar.",
+    "headline2": "Cada movimiento financiero.",
+    "sub": "Financhx centraliza extractos bancarios, automatiza reglas de conciliación y da trazabilidad en tiempo real — sin planillas.",
+    "cta": "Solicitar acceso anticipado",
+    "ctaSecondary": "Ver Demo",
+    "table": {
+      "id": "ID",
+      "bank": "Cuenta Bancaria",
+      "type": "Tipo",
+      "bankAmount": "Monto Banco",
+      "voucher": "Comprobante",
+      "counterpart": "Contraparte",
+      "invoiceAmount": "Monto Factura",
+      "status": "Estado",
+      "detail": "Detalle",
+      "time": "Tiempo",
+      "matched": "Conciliado",
+      "diff": "Diferencia",
+      "all": "Todos"
+    }
+  },
+  "stats": {
+    "items": [
+      { "value": "98%", "label": "Precisión en conciliación" },
+      { "value": "10×", "label": "Más rápido que planillas" },
+      { "value": "-73%", "label": "Reducción de tiempo manual" },
+      { "value": "24/7", "label": "Visibilidad en tiempo real" }
+    ]
+  },
+  "problem": {
+    "badge": "El problema",
+    "title": "La conciliación manual es el cuello de botella que frena tus finanzas.",
+    "sub": "Cada mes, tu equipo contable pierde decenas de horas cruzando bancos, facturación e informes de cobranzas. Financhx elimina esa fricción.",
+    "problems": [
+      {
+        "number": "01",
+        "title": "Fuentes financieras dispersas",
+        "desc": "Bancos, billeteras corporativas, pasarelas de pago y sistemas de facturación operan de manera aislada. Los equipos descargan extractos manualmente cada mes.",
+        "tag": "Sin fuente unificada de verdad financiera."
+      },
+      {
+        "number": "02",
+        "title": "Conciliaciones manuales en planillas",
+        "desc": "La dependencia de hojas de cálculo con macros frágiles genera cuellos de botella y error humano exponencial. Cientos de horas al mes perdidas.",
+        "tag": "Operaciones de bajo valor consumen equipos calificados."
+      },
+      {
+        "number": "03",
+        "title": "Errores y desfasajes difíciles de detectar",
+        "desc": "Comisiones bancarias, retenciones IIBB o cobros duplicados pasan inadvertidos hasta el cierre de balance, cuando el daño ya es difícil de revertir.",
+        "tag": "Inconsistencias que impactan directamente la rentabilidad."
+      },
+      {
+        "number": "04",
+        "title": "Trazabilidad y auditoría inexistente",
+        "desc": "Reconstruir quién autorizó una imputación, qué comprobante la respaldó o en qué fecha ocurrió requiere largas cadenas de mails y archivos desactualizados.",
+        "tag": "Imposible superar auditorías sin fricción y demora."
+      },
+      {
+        "number": "05",
+        "title": "Procesos repetitivos que desgastan",
+        "desc": "Equipos contables calificados dedican la mayor parte de su jornada a tareas mecánicas de copiado y comparación en lugar de análisis estratégico.",
+        "tag": "Desgaste del equipo y postergación financiera crónica."
+      }
+    ]
+  },
+  "videoDemo": {
+    "badge": "Demo en vivo",
+    "title": "Ve Financhx en acción.",
+    "sub": "Observá cómo la plataforma automatiza la conciliación, centraliza fuentes y entrega trazabilidad de auditoría completa — en minutos.",
+    "cta": "Solicitar acceso anticipado",
+    "disclaimer": "Demo ilustrativo. Las cifras mostradas son ejemplos ficticios y no representan operaciones reales."
+  },
+  "platform": {
+    "badge": "Financhx OS",
+    "title": "Tres módulos. Un sistema operativo financiero.",
+    "sub": "Financhx no es solo una herramienta de conciliación. Es una infraestructura operativa integrada para el área financiera de tu empresa.",
+    "modules": [
+      {
+        "tag": "MÓDULO 01",
+        "name": "Reconcile",
+        "status": "En Desarrollo",
+        "desc": "Motor automatizado de conciliación bancaria vs. facturación. Detecta coincidencias exactas, diferencias parciales y movimientos no identificados con reglas configurables.",
+        "features": ["Conciliación Banco ↔ Factura", "Motor de Reglas Configurable", "Deducciones de Retenciones y Comisiones", "Dashboard de Estado en Tiempo Real"]
+      },
+      {
+        "tag": "MÓDULO 02",
+        "name": "Optimize",
+        "status": "Planificado",
+        "desc": "Análisis de flujo de caja en tiempo real, proyecciones de pagos y gestión de tesorería. Convertí datos crudos en insights accionables para tu CFO.",
+        "features": ["Proyección de Flujo de Caja", "Proyecciones 30/60/90 Días", "Sistema de Alertas y Anomalías", "Reportes Ejecutivos"]
+      },
+      {
+        "tag": "MÓDULO 03",
+        "name": "Ledger",
+        "status": "Planificado",
+        "desc": "Registro contable inmutable con log completo de operaciones, cadena de firma digital e integración con sistemas contables certificados.",
+        "features": ["Registro de Auditoría Inmutable", "Firma Digital de Asientos", "Integración con Sistemas Contables", "Cumplimiento Normativo"]
+      }
+    ]
+  },
+  "earlyAccess": {
+    "badge": "PROGRAMA PILOTO PRIVADO",
+    "title": "Sumate a la validación temprana de Financhx.",
+    "sub": "Buscamos directores de administración, contadores y CFOs dispuestos a probar nuestra arquitectura de conciliación y darnos feedback real antes del lanzamiento público.",
+    "benefits": [
+      "Acceso prioritario a las primeras versiones funcionales de Reconcile.",
+      "Influencia directa en el roadmap del producto desde la perspectiva del usuario empresarial.",
+      "Sin costo durante la fase piloto y precio preferencial en el lanzamiento."
+    ],
+    "disclaimer": "No compartimos tus datos con terceros. Usados exclusivamente para coordinar demos y acceso piloto.",
+    "form": {
+      "name": "Nombre completo",
+      "company": "Empresa",
+      "email": "Correo corporativo",
+      "role": "Cargo / Rol",
+      "interest": "¿Qué te interesa más?",
+      "submit": "Solicitar acceso",
+      "sending": "Enviando...",
+      "successTitle": "¡Solicitud enviada!",
+      "successMsg": "Recibimos tu información. Nuestro equipo se comunicará contigo dentro de las 48 horas hábiles para coordinar una demo y el onboarding al piloto.",
+      "interests": [
+        "Financhx Reconcile (Conciliación Bancaria)",
+        "Financhx Optimize (Flujo de Caja & Tesorería)",
+        "Financhx Ledger (Auditoría & Trazabilidad)",
+        "Desarrollo de Software a Medida"
+      ]
+    }
+  },
+  "faq": {
+    "title": "Preguntas Frecuentes",
+    "sub": "Respuestas rápidas sobre la demo, el producto y Financhx.",
+    "tabs": [
+      {
+        "label": "Demo",
+        "faqs": [
+          { "question": "¿La demostración procesa conciliaciones reales?", "answer": "No. La demostración presenta escenarios ilustrativos para explicar un flujo; el producto está en desarrollo y todavía no procesa operaciones reales." },
+          { "question": "¿Qué representan las cifras que aparecen?", "answer": "Son datos de ejemplo para ilustrar la interfaz; no representan operaciones de clientes ni resultados reales." }
+        ]
+      },
+      {
+        "label": "Financhx",
+        "faqs": [
+          { "question": "¿Financhx es un banco o brinda asesoramiento financiero?", "answer": "No. Financhx desarrolla software para operaciones empresariales; no es una entidad bancaria, no custodia fondos ni ofrece asesoramiento financiero o impositivo." },
+          { "question": "¿Pueden desarrollar software a medida?", "answer": "Sí. La división de ingeniería digital recibe consultas para aplicaciones web, sistemas internos, automatización e integraciones empresariales." }
+        ]
+      },
+      {
+        "label": "Datos",
+        "faqs": [
+          { "question": "¿La demo lee o envía los archivos seleccionados?", "answer": "No. El cargador actual solo muestra el nombre y tamaño del archivo seleccionado. No lee su contenido ni lo envía a un servidor." },
+          { "question": "¿Las métricas son resultados de clientes?", "answer": "No. Las cifras del prototipo son datos ilustrativos; no representan resultados reales ni garantizan desempeño." }
+        ]
+      }
+    ]
+  },
+  "footer": {
+    "tagline": "Software para simplificar, centralizar y automatizar operaciones financieras empresariales. Reduciendo procesos manuales y otorgando trazabilidad contable integral.",
+    "badge": "Hecho para empresas en crecimiento",
+    "country": "Argentina",
+    "social": "Redes sociales",
+    "platformTitle": "Financhx OS",
+    "legalTitle": "Legal",
+    "contactTitle": "Contacto",
+    "links": {
+      "reconcile": "Reconcile",
+      "optimize": "Optimize (Planificado)",
+      "audit": "Auditoría & Trazabilidad",
+      "demo": "Video Demostración",
+      "legal": "Aviso Legal",
+      "privacy": "Política de Privacidad",
+      "cookies": "Política de Cookies",
+      "terms": "Términos y Condiciones"
+    },
+    "contact": {
+      "salesLabel": "Ventas",
+      "supportLabel": "Soporte y ayuda",
+      "infoLabel": "Info",
+      "legalLabel": "Legal",
+      "employmentLabel": "Empleo",
+      "marketingLabel": "Marketing"
+    },
+    "disclaimer": "Financhx es una plataforma de software en desarrollo diseñada para la gestión operativa, conciliación de movimientos y control administrativo de empresas. Financhx no es una entidad bancaria, compañía financiera regulada, billetera virtual ni plataforma de inversión o custodia de fondos.",
+    "copyright": "© 2026 Financhx Technologies. Todos los derechos reservados.",
+    "privacyLink": "Privacidad",
+    "termsLink": "Términos",
+    "cookiesLink": "Cookies",
+    "legalLink": "Aviso Legal"
+  },
+  "customSoftware": {
+    "badge": "Ingeniería Digital",
+    "title": "También desarrollamos software a medida.",
+    "sub": "Más allá de Financhx, nuestro equipo diseña y desarrolla aplicaciones web, sistemas internos e integraciones empresariales a pedido.",
+    "cta": "Hablemos de tu proyecto"
+  },
+  "legal": {
+    "nav": {
+      "legalNotice": "Aviso Legal",
+      "privacy": "Política de Privacidad",
+      "cookies": "Política de Cookies",
+      "terms": "Términos y Condiciones"
+    },
+    "back": "Volver al inicio",
+    "framework": "Marco Legal Institucional",
+    "lastUpdated": "Última actualización",
+    "compliance": "Cumplimiento Ley 25.326 y estándares internacionales"
+  },
+  "cookieBanner": {
+    "title": "Privacidad & Transparencia",
+    "heading": "Gestión de Cookies y Datos de Navegación",
+    "body": "Utilizamos cookies esenciales y analíticas anónimas para garantizar el funcionamiento seguro del sitio, recordar sus preferencias y evaluar el desempeño de la plataforma. Para más detalles, consulte nuestra",
+    "policyLink": "Política de Cookies",
+    "configure": "Configurar",
+    "rejectNonEssential": "Rechazar no esenciales",
+    "acceptAll": "Aceptar todas",
+    "cancel": "Cancelar",
+    "savePreferences": "Guardar preferencias",
+    "essential": "Cookies Técnicas y Esenciales",
+    "essentialDesc": "Estrictamente necesarias para el enrutamiento y seguridad.",
+    "alwaysActive": "Siempre Activas",
+    "analytics": "Cookies de Rendimiento y Análisis",
+    "analyticsDesc": "Métricas anónimas de carga y tráfico agregado sin rastrear identidad."
+  }
+}
+

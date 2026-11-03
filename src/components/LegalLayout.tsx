@@ -3,11 +3,14 @@ import Link from "next/link";
 import Image from "next/image";
 import { ArrowLeft, Shield, FileText, Lock, Cookie } from "lucide-react";
 
+type ActiveDoc = "aviso-legal" | "privacidad" | "cookies" | "terminos";
+
 interface LegalLayoutProps {
   title: string;
   subtitle: string;
   lastUpdated: string;
-  activeDoc: "aviso-legal" | "privacidad" | "cookies" | "terminos";
+  activeDoc: ActiveDoc;
+  lang: string;
   children: React.ReactNode;
 }
 
@@ -16,13 +19,36 @@ export function LegalLayout({
   subtitle,
   lastUpdated,
   activeDoc,
+  lang,
   children,
 }: LegalLayoutProps) {
+  const isEn = lang === "en";
+
   const navItems = [
-    { href: "/aviso-legal", label: "Aviso Legal", icon: FileText, key: "aviso-legal" },
-    { href: "/privacidad", label: "Política de Privacidad", icon: Lock, key: "privacidad" },
-    { href: "/cookies", label: "Política de Cookies", icon: Cookie, key: "cookies" },
-    { href: "/terminos", label: "Términos y Condiciones", icon: Shield, key: "terminos" },
+    {
+      href: `/${lang}/aviso-legal`,
+      label: isEn ? "Legal Notice" : "Aviso Legal",
+      icon: FileText,
+      key: "aviso-legal",
+    },
+    {
+      href: `/${lang}/privacidad`,
+      label: isEn ? "Privacy Policy" : "Política de Privacidad",
+      icon: Lock,
+      key: "privacidad",
+    },
+    {
+      href: `/${lang}/cookies`,
+      label: isEn ? "Cookie Policy" : "Política de Cookies",
+      icon: Cookie,
+      key: "cookies",
+    },
+    {
+      href: `/${lang}/terminos`,
+      label: isEn ? "Terms & Conditions" : "Términos y Condiciones",
+      icon: Shield,
+      key: "terminos",
+    },
   ];
 
   return (
@@ -31,14 +57,14 @@ export function LegalLayout({
       <header className="sticky top-0 z-40 w-full border-b border-[#222222] bg-[#050505]/90 backdrop-blur-md">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
           <Link
-            href="/"
+            href={`/${lang}`}
             className="flex items-center gap-2 group text-xs font-mono text-zinc-400 hover:text-white transition-colors"
           >
             <ArrowLeft className="w-4 h-4 transition-transform group-hover:-translate-x-1" />
-            <span>Volver al inicio</span>
+            <span>{isEn ? "Back to home" : "Volver al inicio"}</span>
           </Link>
 
-          <Link href="/" className="flex items-center gap-2">
+          <Link href={`/${lang}`} className="flex items-center gap-2">
             <Image
               src="/logos/financhx_horizontal_blanco.png"
               alt="Financhx Logo"
@@ -56,7 +82,7 @@ export function LegalLayout({
         <div className="max-w-5xl mx-auto px-4 sm:px-6 py-12 md:py-16">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-zinc-800 bg-zinc-900/60 text-[11px] font-mono text-zinc-400 mb-4">
             <Shield className="w-3.5 h-3.5 text-zinc-300" />
-            Marco Legal Institucional
+            {isEn ? "Institutional Legal Framework" : "Marco Legal Institucional"}
           </div>
           <h1 className="text-3xl md:text-5xl font-semibold tracking-tight text-white mb-3">
             {title}
@@ -65,7 +91,10 @@ export function LegalLayout({
             {subtitle}
           </p>
           <p className="text-xs font-mono text-zinc-500 mt-6">
-            Última actualización: {lastUpdated} · Cumplimiento Ley 25.326 y estándares internacionales
+            {isEn ? "Last updated" : "Última actualización"}: {lastUpdated} ·{" "}
+            {isEn
+              ? "Compliance Ley 25.326 and international standards"
+              : "Cumplimiento Ley 25.326 y estándares internacionales"}
           </p>
         </div>
       </div>
@@ -103,12 +132,13 @@ export function LegalLayout({
 
       {/* Minimal Legal Footer */}
       <footer className="border-t border-[#1C1C1E] bg-[#050505] py-8 text-center text-xs text-zinc-600 font-mono">
-        <p>© 2026 Financhx Technologies. Todos los derechos reservados.</p>
+        <p>© 2026 Financhx Technologies. {isEn ? "All rights reserved." : "Todos los derechos reservados."}</p>
         <p className="mt-1 text-[11px] text-zinc-600">
-          Software B2B de infraestructura financiera y conciliación operativa.
+          {isEn
+            ? "B2B financial infrastructure and operational reconciliation software."
+            : "Software B2B de infraestructura financiera y conciliación operativa."}
         </p>
       </footer>
     </div>
   );
 }
-

@@ -41,7 +41,8 @@ const ledgerItems = [
   },
 ];
 
-export function Hero() {
+export function Hero({ lang = 'es' }: { lang?: string }) {
+  const isEn = lang === 'en';
   const containerRef = useRef<HTMLDivElement>(null);
   const [activeTab, setActiveTab] = useState<"all" | "matched" | "diff">("all");
 
@@ -88,13 +89,13 @@ export function Hero() {
           <div className="inline-flex items-center gap-2.5 px-3.5 py-1 rounded-full border border-white/10 bg-white/[0.03] text-xs font-mono text-neutral-300">
             <span className="tracking-wider uppercase font-semibold text-white">Financial Operating System</span>
             <span className="text-neutral-600">/</span>
-            <span className="text-neutral-400">Acceso Privado</span>
+            <span className="text-neutral-400">{isEn ? "Private Access" : "Acceso Privado"}</span>
           </div>
 
           {/* Headline animado palabra por palabra con TextReveal (de interior-main) */}
           <div className="relative">
             <TextReveal
-              text="Una nueva forma de gestionar las finanzas de tu empresa."
+              text={isEn ? "A new way to manage your company's finances." : "Una nueva forma de gestionar las finanzas de tu empresa."}
               by="word"
               stagger={0.06}
               maxDuration={1.4}
@@ -104,26 +105,28 @@ export function Hero() {
 
           {/* Subtitle en escala de grises refinada */}
           <p className="text-base sm:text-lg md:text-xl text-neutral-400 font-normal leading-relaxed max-w-2xl mx-auto">
-            Financhx conecta tus fuentes financieras, automatiza conciliaciones y centraliza el control contable en una sola plataforma trazable.
+            {isEn
+              ? "Financhx connects your financial sources, automates reconciliation rules, and centralizes accounting control in a single auditable platform."
+              : "Financhx conecta tus fuentes financieras, automatiza conciliaciones y centraliza el control contable en una sola plataforma trazable."}
           </p>
 
           {/* BOTONES INTERACTIVOS - DIRECTOS DE UILAYOUTS (btn-creative-right & btn-hover-outline) */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-2">
-            {/* Botón principal: Adaptación limpia sin artefactos en blanco y negro */}
+            {/* Botón principal */}
             <a
               href="#acceso-anticipado"
               className="group relative cursor-pointer px-7 py-3.5 w-full sm:w-auto border border-white bg-white hover:bg-neutral-200 text-black rounded-full font-semibold text-sm transition-all duration-300 shadow-[0_0_20px_rgba(255,255,255,0.15)] flex items-center justify-center gap-2"
             >
-              <span>Solicitar acceso anticipado</span>
+              <span>{isEn ? "Request early access" : "Solicitar acceso anticipado"}</span>
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </a>
 
-            {/* Botón secundario: ButtonHoverOutLine */}
+            {/* Botón secundario */}
             <a
               href="#reconcile"
               className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 text-sm font-medium text-white border border-white/20 hover:border-white hover:bg-white hover:text-black rounded-full transition-all duration-300"
             >
-              <span>Ver Financhx Reconcile</span>
+              <span>{isEn ? "Explore Financhx Reconcile" : "Ver Financhx Reconcile"}</span>
               <ChevronRight className="w-4 h-4" />
             </a>
           </div>
@@ -132,11 +135,11 @@ export function Hero() {
           <div className="flex flex-wrap items-center justify-center gap-6 pt-4 text-xs text-neutral-400 font-mono">
             <span className="flex items-center gap-1.5">
               <ShieldCheck className="w-3.5 h-3.5 text-neutral-200" />
-              Control Contable Riguroso
+              {isEn ? "Rigorous Accounting Control" : "Control Contable Riguroso"}
             </span>
             <span className="flex items-center gap-1.5">
               <Layers className="w-3.5 h-3.5 text-neutral-200" />
-              Arquitectura Modular B2B
+              {isEn ? "Modular B2B Architecture" : "Arquitectura Modular B2B"}
             </span>
             <span className="flex items-center gap-1.5">
               <Building2 className="w-3.5 h-3.5 text-neutral-200" />
@@ -314,3 +317,4 @@ export function Hero() {
     </section>
   );
 }
+

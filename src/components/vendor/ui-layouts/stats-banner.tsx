@@ -6,7 +6,7 @@ import { NumberTicker } from '@/components/NumberTicker'
 const formatNumber = (value: number) =>
   new Intl.NumberFormat('es-AR').format(value)
 
-export const StatsBanner = () => {
+export const StatsBanner = ({ lang = 'es' }: { lang?: string }) => {
   return (
     <section className="overflow-hidden border-y border-[#292929] bg-[#050505] px-4 py-20 sm:px-6 lg:px-8">
       <div className="max-w-6xl mx-auto">
@@ -100,3 +100,4 @@ const StatBox = ({
     <p className="text-base font-medium text-[#C5C5C5]">{label}</p>
   </motion.div>
 )
+

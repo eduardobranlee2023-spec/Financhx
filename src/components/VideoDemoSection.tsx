@@ -5,7 +5,7 @@ import { Play, Pause, Volume2, VolumeX, Maximize2 } from "lucide-react";
 import { Spotlight, SpotLightItem } from "./vendor/cursify/spotlight";
 import { GapPattern } from "./vendor/ui-layouts/gap-pattern";
 
-export function VideoDemoSection() {
+export function VideoDemoSection({ lang = 'es' }: { lang?: string }) {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [isPlaying, setIsPlaying] = useState(false);
   const [isMuted, setIsMuted] = useState(false);
@@ -136,4 +136,5 @@ export function VideoDemoSection() {
     </section>
   );
 }
+
 
