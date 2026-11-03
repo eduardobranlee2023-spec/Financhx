@@ -28,7 +28,7 @@ export default function AvisoLegalPage() {
           <div><strong className="text-white">Nombre Comercial:</strong> Financhx · Financial Operating System.</div>
           <div><strong className="text-white">Identificación Tributaria (CUIT/NIF):</strong> 30-71829402-9 (CUIT representativo de operaciones de software y servicios informáticos en la República Argentina).</div>
           <div><strong className="text-white">Domicilio Legal / Fiscal:</strong> Ciudad Autónoma de Buenos Aires, República Argentina.</div>
-          <div><strong className="text-white">Correo electrónico institucional:</strong> <a href="mailto:legal@financhx.com" className="text-white underline underline-offset-4">legal@financhx.com</a> / <a href="mailto:soporte@financhx.com" className="text-white underline underline-offset-4">soporte@financhx.com</a></div>
+          <div><strong className="text-white">Correo electrónico institucional:</strong> <a href="mailto:info@financhx.com" className="text-white underline underline-offset-4">info@financhx.com</a> / <a href="mailto:legal@financhx.com" className="text-white underline underline-offset-4">legal@financhx.com</a> / <a href="mailto:soporte@financhx.com" className="text-white underline underline-offset-4">soporte@financhx.com</a></div>
           <div><strong className="text-white">Sitio web oficial:</strong> <a href="https://financhx.com" className="text-white underline underline-offset-4">https://financhx.com</a></div>
         </div>
 

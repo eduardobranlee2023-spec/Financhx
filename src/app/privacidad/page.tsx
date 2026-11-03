@@ -24,7 +24,7 @@ export default function PrivacidadPage() {
         <div className="bg-[#0D0D0E] border border-zinc-800 rounded-xl p-4 font-mono text-xs text-zinc-300 space-y-1.5">
           <div><strong className="text-white">Responsable:</strong> Financhx Technologies</div>
           <div><strong className="text-white">Finalidad principal:</strong> Provisión de software de conciliación y gestión financiera B2B</div>
-          <div><strong className="text-white">Correo de Privacidad / DPO:</strong> <a href="mailto:privacidad@financhx.com" className="text-white underline underline-offset-4">privacidad@financhx.com</a></div>
+          <div><strong className="text-white">Correo de Privacidad / DPO:</strong> <a href="mailto:legal@financhx.com" className="text-white underline underline-offset-4">legal@financhx.com</a></div>
           <div><strong className="text-white">Jurisdicción de Protección de Datos:</strong> Agencia de Acceso a la Información Pública (AAIP) - República Argentina (Ley 25.326)</div>
         </div>
 
@@ -95,8 +95,8 @@ export default function PrivacidadPage() {
         </ul>
         <p className="mt-3">
           Para ejercer cualquiera de estos derechos, envíe una solicitud por escrito acreditando su identidad a:{" "}
-          <a href="mailto:privacidad@financhx.com" className="text-white underline underline-offset-4">
-            privacidad@financhx.com
+          <a href="mailto:legal@financhx.com" className="text-white underline underline-offset-4">
+            legal@financhx.com
           </a>
           . Responderemos a su solicitud dentro de los plazos estipulados por la ley (máximo de 10 días hábiles en Argentina).
         </p>
