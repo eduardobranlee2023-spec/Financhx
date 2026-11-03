@@ -19,11 +19,10 @@ export function RobotFloat() {
     return () => media.removeEventListener("change", sync);
   }, []);
 
-  // IntersectionObserver: Only load heavy WebGL 3D scene when the user scrolls near the component
+  // IntersectionObserver: Solo cargamos el motor 3D cuando el usuario llega a la sección
   useEffect(() => {
     if (!containerRef.current) return;
 
-    // Use IntersectionObserver with a generous rootMargin (200px before reaching view)
     const observer = new IntersectionObserver(
       (entries) => {
         const [entry] = entries;
@@ -33,7 +32,7 @@ export function RobotFloat() {
         }
       },
       {
-        rootMargin: "250px",
+        rootMargin: "150px",
       }
     );
 
@@ -48,13 +47,18 @@ export function RobotFloat() {
       ref={containerRef}
       className="relative w-full max-w-[320px] aspect-square"
     >
-      {/* Glow halo behind robot */}
-      <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-[#E5E5E5]/10 via-transparent to-transparent blur-2xl pointer-events-none" />
-      {/* Glass frame */}
-      <div className="relative h-full w-full rounded-3xl border border-[#292929] bg-[#0A0A0A]/60 backdrop-blur-sm overflow-hidden shadow-[0_20px_60px_-20px_rgba(0,0,0,0.8)]">
-        <div className="absolute inset-0 bg-gradient-to-br from-[#E5E5E5]/[0.04] to-transparent pointer-events-none" />
+      {/* Halo de luz optimizado (sin filtros blur pesados en móviles) */}
+      <div className="absolute inset-0 rounded-3xl bg-white/[0.03] blur-xl pointer-events-none transform-gpu" />
+      
+      {/* Marco de vidrio con aceleración por hardware (will-change & transform-gpu) */}
+      <div className="relative h-full w-full rounded-3xl border border-[#292929] bg-[#0A0A0A]/80 backdrop-blur-xs overflow-hidden shadow-[0_20px_60px_-20px_rgba(0,0,0,0.8)] transform-gpu will-change-transform">
+        <div className="absolute inset-0 bg-gradient-to-br from-white/[0.03] to-transparent pointer-events-none" />
+        
         {shouldLoadSpline ? (
-          <SplineScene scene={SPLINE_SCENE} className="h-full w-full" />
+          <SplineScene
+            scene={SPLINE_SCENE}
+            className="h-full w-full touch-pan-y"
+          />
         ) : (
           <div
             aria-label="Cargando asistente 3D"
@@ -64,8 +68,9 @@ export function RobotFloat() {
           </div>
         )}
       </div>
+
       {/* Floating label */}
-      <div className="absolute -bottom-3 left-1/2 -translate-x-1/2 inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#0D0D0D] border border-[#292929] text-[10px] font-mono text-[#C5C5C5] whitespace-nowrap">
+      <div className="absolute -bottom-3 left-1/2 -translate-x-1/2 inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#0D0D0D] border border-[#292929] text-[10px] font-mono text-[#C5C5C5] whitespace-nowrap shadow-lg">
         <span className="w-1.5 h-1.5 rounded-full bg-white/40" />
         Asistente operativo activo
       </div>
