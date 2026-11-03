@@ -15,16 +15,12 @@ export interface SubmissionResponse {
 
 /**
  * Service to handle early access submissions.
- * This is configured as a clear integration point for Supabase.
- * In production, simply configure your SUPABASE_URL and SUPABASE_ANON_KEY.
+ * Conecta con el endpoint /api/early-access (alimentado por Resend).
  */
 export async function submitEarlyAccess(
   data: EarlyAccessSubmission
 ): Promise<SubmissionResponse> {
-  // Simulate network round-trip for realistic feedback
-  await new Promise((resolve) => setTimeout(resolve, 800));
-
-  // Basic validation check
+  // Validación básica del lado cliente
   if (!data.email || !data.nombre || !data.empresa) {
     return {
       success: false,
@@ -32,7 +28,6 @@ export async function submitEarlyAccess(
     };
   }
 
-  // Email format check
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   if (!emailRegex.test(data.email)) {
     return {
@@ -41,17 +36,7 @@ export async function submitEarlyAccess(
     };
   }
 
-  /*
-   * ==========================================
-   * PUNTO DE INTEGRACIÓN SUPABASE:
-   * ==========================================
-   * import { createClient } from '@supabase/supabase-js'
-   * const supabase = createClient(process.env.NEXT_PUBLIC_SUPABASE_URL!, process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!)
-   * const { error } = await supabase.from('early_access_leads').insert([data])
-   * if (error) throw error
-   */
-
-  // Store in localStorage if available for demo persistence
+  // Backup en localStorage para auditoría local
   if (typeof window !== "undefined") {
     try {
       const existing = JSON.parse(
@@ -63,13 +48,30 @@ export async function submitEarlyAccess(
       });
       localStorage.setItem("financhx_leads", JSON.stringify(existing));
     } catch {
-      // Ignore localStorage errors
+      // Ignorar error de localStorage
     }
   }
 
-  return {
-    success: true,
-    message: "Solicitud registrada con éxito para el programa de validación.",
-    data,
-  };
+  try {
+    const response = await fetch("/api/early-access", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    });
+
+    const result = await response.json();
+    return {
+      success: result.success,
+      message: result.message || (result.success ? "Solicitud registrada con éxito." : "Error al procesar la solicitud."),
+      data,
+    };
+  } catch (error) {
+    console.error("Error al conectar con la API de Early Access:", error);
+    return {
+      success: false,
+      message: "No se pudo conectar con el servidor. Por favor, intentá nuevamente.",
+    };
+  }
 }
